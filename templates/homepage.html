@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
 {% block title %} Homepage {% endblock %}
+
 {% block content %}
-<h1>Homepage</h1>
+<h1>Create Story:</h1>
 {% endblock %}
 
 {% block form %}
 <form method="GET" action="/story">
-	Place: <input type="text" name="place" />
+	<input type="hidden" name="story_id" value="{{ story_id }}" />
+
+	{% for prompt in prompts %}
+	<label>{{ prompt.capitalize() }}:</label>
+	<input type="text" name="{{ prompt }}" />
 	<br><br>
-	Noun: <input type="text" name="noun" />
-	<br><br>
-	Verb: <input type="text" name="verb">
-	<br><br>
-	Adjective: <input type="text" name="adjective">
-	<br><br>
-	Plural Noun: <input type="text" name="plural_noun">
-	<br><br>
-	<button type="submit" id="submit">Submit</button>
+	{% endfor %}
+
+	<button type="submit">Submit</button>
 </form>
 {% endblock %}

@@ -1,0 +1,42 @@
+h1 {
+	margin: 5px;
+	padding: 10px;
+}
+
+#content {
+	margin: 10px;
+	margin-left: 30px;
+}
+
+#story-content {
+	font-size: 20px;
+}
+
+select {
+	padding: 5px;
+	margin: 5px;
+	width: 250px;
+}
+
+#create {
+	padding: 5px;
+}
+
+nav {
+	background-color: lightskyblue;
+	overflow: hidden;
+}
+
+nav a {
+	background-color: lightskyblue;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: lightblue;
+	color: black;
+}
